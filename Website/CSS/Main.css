@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: NORMAL_OR_ITALIC;
+    font-weight: NUMERIC_WEIGHT_VALUE;
+    font-display: swap;
+    src: url(/Fonts/Roboto-Black.ttf) format('truetype');
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.button {
+    width: 200px;
+    height: 100px;
+    flex-shrink: 0;
+    vertical-align: middle;
+    display: flex;
+    place-items: center;
+
+    color: white;
+    background: #0B0C10;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 0px 5px 0px;
+    outline: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #1F2833;
+}
+
+.button-text {
+    color: #C5C6C7;
+    font-family: Roboto;
+}
+
+.search{
+    width: 210px;
+    height: 60px;
+    flex-shrink: 0;
+    vertical-align: middle;
+    display: flex;
+    place-items: center;
+    margin: 5px 0px 5px 0px;
+}
+
+.search-bar {
+    width: 110px;
+    height: 100%;
+    color: #C5C6C7;
+    font-family: Roboto;
+    background: #0B0C10;
+    border-radius: 5px 0px 0px 5px;
+    border-color: #66FCF1;
+}
+
+.search-bar::placeholder {
+    color: #C5C6C7;
+    font-family: Roboto;
+}
+
+.search-submit {
+    width: 80px;
+    height: 65px;
+    background: #0B0C10;
+    border-radius: 0px 5px 5px 0px;
+    border-color: #66FCF1;
+}
+
+.search-submit:hover {
+    background: #1F2833;
+}
+
+.title {
+    color: #66FCF1;
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+.timeline {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+.button-icon {
+    width: 50px;
+    height: 50px;
+    padding: 2px 5px 2px 5px;
+    filter: invert(85%);
+}
+
+.material-icon {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.main {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.panel-toggle {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+
+    color: #C5C6C7;
+    background: #0B0C10;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.panel-toggle:hover {
+    background: #1F2833;
+}
+
+.icon-close {
+    display: initial;
+}
+
+.icon-open {
+    display: none;
+}
+
+.panel {
+    display: none;
+    width: 200px;
+    flex-shrink: 0;
+    padding: 20px;
+    color: white;
+    background: #0B0C10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    z-index: 2;
+}
+
+.panel-open .panel {
+    display: initial;
+}
+
+.panel-open .icon-close {
+    display: none;
+}
+
+.panel-open .icon-open {
+    display: initial;
+}
+
+#map { 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
